@@ -62,6 +62,9 @@ const PropertyDetails = ({
       flexWrap="wrap"
       textTransform="uppercase"
       justifyContent="space-between"
+      backgroundColor="green.50"
+      marginBottom="10px"
+      marginTop="10px"
     >
       <Flex
         justifyContent="space-between"

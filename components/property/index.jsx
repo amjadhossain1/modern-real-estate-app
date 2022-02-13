@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Flex, Box, Text, Avatar } from "@chakra-ui/react";
-// import { Avatar } from '@chakra-ui/avatar';
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
@@ -25,23 +24,23 @@ const Property = ({ property }) => {
     externalID,
   } = property;
 
-  console.log("titles: ", title);
-
   return (
     <Link href={`/property/${externalID}`} passHref>
       <Flex
         flexWrap="wrap"
-        w="412px"
-        p="1"
+        w="400px"
+   
         paddingTop="0px"
         justifyContent="flex-start"
         cursor="pointer"
         bgColor="gray.50"
         borderRadius="md"
-        m="1"
+        m="auto"
+        marginBottom="5"
         _hover={{
           background: "gray.100",
-          color: "teal.500",
+          color: "teal.700",
+          shadow: "md",
         }}
       >
         <Box>
@@ -50,9 +49,10 @@ const Property = ({ property }) => {
             width={400}
             height={260}
             alt="house"
+           
           />
         </Box>
-        <Box w="full">
+        <Box w="full" p="3">
           <Flex
             paddingTop="2"
             alignItems="center"
@@ -68,7 +68,13 @@ const Property = ({ property }) => {
               </Text>
             </Flex>
             <Box>
-              <Avatar size="sm" src={agency?.logo?.url}></Avatar>
+              <Avatar
+                size="sm"
+                src={agency?.logo?.url}
+                border="1px"
+                borderColor="green.100"
+                p="1px"
+              ></Avatar>
             </Box>
           </Flex>
           <Flex

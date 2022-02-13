@@ -38,7 +38,7 @@ const Banner = (props) => {
             <br />
             {desc2}
           </Text>
-          <Button fontSize="xl">
+          <Button fontSize="xl" colorScheme='teal' size='md'>
             <Link href={linkName}>
               <a>{buttonText}</a>
             </Link>

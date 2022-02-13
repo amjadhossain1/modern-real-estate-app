@@ -23,30 +23,41 @@ const Navbar = () => (
       backgroundColor="gray.50"
       borderBottom="1px"
       borderColor="gray.300"
+      boxShadow="base"
     >
       <Box maxWidth="1280px" m="auto">
         <Flex p="2">
-          <Box fontSize="3xl" color="blue.400" fontWeight="bold" cursor='pointer'>
+          <Box
+            fontSize="3xl"
+            color="blue.400"
+            fontWeight="bold"
+            cursor="pointer"
+          >
             <Link href="/" paddingLeft="2" passHref>
-              <i>Real estate</i>
+              <i>Real Estate </i>
             </Link>
           </Box>
           <Spacer />
-          <Box>
+          <Box display={{ base: "block", md: "block", sm: "none" }}>
             <Menu>
               <Flex alignItems="center" justifyContent="center">
                 <Link href="/search" passHref>
-                  <MenuItem w="150px" icon={<BsSearch />}>
+                  <MenuItem
+                    textAlign="center"
+                    w="100"
+                    fontWeight="semibold"
+                    icon={<BsSearch />}
+                  >
                     Search
                   </MenuItem>
                 </Link>
                 <Link href="/search?purpose=for-sale" passHref>
-                  <MenuItem w="150px" icon={<FcAbout />}>
+                  <MenuItem w="100" fontWeight="semibold" icon={<FcAbout />}>
                     Buy Property
                   </MenuItem>
                 </Link>
                 <Link href="/search?purpose=for-rent" passHref>
-                  <MenuItem w="150px" icon={<FiKey />}>
+                  <MenuItem w="100" fontWeight="semibold" icon={<FiKey />}>
                     Rent Property
                   </MenuItem>
                 </Link>
@@ -60,19 +71,20 @@ const Navbar = () => (
                 icon={<FcMenu />}
                 variant="outline"
                 color="green.100"
+                borderColor="gray.400"
               />
               <MenuList>
                 <Link href="/" passHref>
-                  <MenuItem icon={<FcHome />}>Home</MenuItem>
+                  <MenuItem fontWeight="semibold" icon={<FcHome />}>Home</MenuItem>
                 </Link>
                 <Link href="/search" passHref>
-                  <MenuItem icon={<BsSearch />}>Search</MenuItem>
+                  <MenuItem fontWeight="semibold" icon={<BsSearch />}>Search</MenuItem>
                 </Link>
                 <Link href="/search?purpose=for-sale" passHref>
-                  <MenuItem icon={<FcAbout />}>Buy Property</MenuItem>
+                  <MenuItem fontWeight="semibold" icon={<FcAbout />}>Buy Property</MenuItem>
                 </Link>
                 <Link href="/search?purpose=for-rent" passHref>
-                  <MenuItem icon={<FiKey />}>Rent Property</MenuItem>
+                  <MenuItem fontWeight="semibold" icon={<FiKey />}>Rent Property</MenuItem>
                 </Link>
               </MenuList>
             </Menu>
