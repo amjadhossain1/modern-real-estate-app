@@ -27,7 +27,6 @@ const Search = ({ properties }) => {
         justifyContent="center"
         alignItems="center"
         paddingTop="30px"
-
         _hover={{
           background: "gray.200",
           color: "teal.500",
@@ -62,7 +61,7 @@ const Search = ({ properties }) => {
         >
           <Image src={noresult} alt="no search result" />
           <Text fontSize="xl" marginTop="3">
-            No Result Found.
+            No Property Result Found.
           </Text>
         </Flex>
       )}
