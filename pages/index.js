@@ -1,8 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Flex, Box, Text, Button } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
-import Property from "../components/Property";
+import Property from "../components/property";
 import Banner from "../components/banner";
 
 export default function Home({ propertiesForRent, propertiesForSale }) {
